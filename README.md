@@ -22,7 +22,7 @@ To install dependencies of server, run following commands.
 cd server
 npm install
 ```
-*Note: Install nodemon also because this program need nodemon to run.*
+*Note: Install nodemon also because this program need nodemon to run. Or change the server start script in package.json file in server dir.*
 
 ### Run the app
 
