@@ -3,7 +3,7 @@
 
 This is the basic e-banking system made with the help of mern tech.
 
-### Tech Stack
+### Tech Used
 **Server:** - node js, express
 
 **Client:** - react js, pure css
