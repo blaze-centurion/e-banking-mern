@@ -1,0 +1,99 @@
+.HistoryContentContainer {
+	position: relative;
+	width: 100%;
+}
+.tableBx {
+	position: relative;
+	width: 100%;
+	padding: 25px;
+}
+.tableBx .table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.tableBx .table thead {
+	text-align: left;
+}
+.tableBx .table thead tr th {
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.35px;
+	color: #010;
+	opacity: 1;
+	padding: 16px 10px;
+	vertical-align: top;
+	border-bottom: 1px solid #e2e0e0;
+}
+.tableBx .table tbody tr td {
+	font-size: 14px;
+	letter-spacing: 0.35px;
+	font-weight: normal;
+	color: rgba(0, 0, 0, 0.65);
+	padding: 20px 0 15px 10px;
+	text-align: left;
+	border-bottom: 1px solid #dee2e6;
+}
+.tableBx .table tbody tr td span.name {
+	color: rgb(24, 144, 255);
+}
+.tableBx .table tbody tr td a.btn {
+	width: 100px;
+	text-decoration: none;
+	line-height: 28px;
+	display: inline-block;
+	font-weight: medium;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+	font-size: 12px;
+	color: #1890ff;
+	background: #e6f7ff;
+	border: 1px solid #91d5ff;
+	opacity: 1;
+}
+
+@media (max-width: 780px) {
+	.tableBx .table thead {
+		display: none;
+	}
+	.tableBx .table,
+	.tableBx .table tbody,
+	.tableBx .table tr,
+	.tableBx .table td {
+		display: block;
+		width: 100%;
+	}
+	.tableBx .table tbody tr {
+		margin-bottom: 15px;
+	}
+	.tableBx .table tbody tr td {
+		text-align: right;
+		position: relative;
+		padding-left: 50%;
+		word-wrap: break-word;
+		word-break: break-all;
+	}
+	.tableBx .table tbody tr td::before {
+		content: attr(data-label);
+		position: absolute;
+		left: 0;
+		width: 50%;
+		padding-left: 15px;
+		font-weight: 600;
+		font-size: 14px;
+		text-align: left;
+	}
+	.tableBx .table tbody tr {
+		border-bottom: 1px solid rgb(24, 144, 255);
+		display: block;
+		margin-bottom: 0.625em;
+	}
+}
+
+@media (max-width: 280px)
+{
+	.tableBx
+	{
+		padding: 8px;
+	}
+}

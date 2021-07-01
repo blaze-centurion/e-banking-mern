@@ -1,0 +1,116 @@
+body
+{
+    overflow-x: hidden;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+}
+.navigation
+{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    transition: 0.5s;
+    overflow: hidden;
+    border-right: 0.4mm solid #bababa;
+}
+.navigation.active
+{
+    width: 60px;
+}
+.navigation ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li
+{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-right: 2px solid transparent;
+    background: #fff;
+}
+.navigation ul li a.active .icon .MuiSvgIcon-root
+{
+    color: #00aeff;
+}
+.navigation ul li:hover a, .navigation ul li:hover a .icon .MuiSvgIcon-root
+{
+    color: #00aeff;
+}
+.navigation ul li:nth-child(1)
+{
+    margin-bottom: 20px;
+    border-bottom: 0.4mm solid #bababa;
+
+}
+.navigation ul li:nth-child(1) a, .navigation ul li:nth-child(1) a .icon .MuiSvgIcon-root
+{    
+    background: transparent !important;
+    border: none !important;
+    color: rgba(0, 0, 0, 0.815) !important;
+}
+.navigation ul li:nth-child(1):hover
+{
+    background: transparent;
+}
+.navigation ul li:nth-child(1):hover a, .navigation ul li:nth-child(1):hover a .icon .MuiSvgIcon-root
+{
+    color: #000;
+}
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.815);
+    transition: .2s;
+}
+.navigation ul li a.active
+{
+    background: #e6f7ff;
+    border-right: 2px solid #00aeff;
+    color: #00aeff;
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    padding: 5px 0;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.navigation ul li a .icon .MuiSvgIcon-root
+{
+    color: rgba(0, 0, 0, 0.815);
+    font-size: 24px;
+    transition: .2s;
+}
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.disabled
+{
+    color: rgba(0, 0, 0, 0.25) !important;
+}
+.disabled .icon .MuiSvgIcon-root
+{
+    color: rgba(0, 0, 0, 0.25) !important;
+}

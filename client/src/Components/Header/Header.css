@@ -1,0 +1,57 @@
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px -1px 5px rgba(0,0,0,0.2);
+    background: transparent;
+    z-index: 200;
+    min-height: 50px;
+}
+header .toggle-menu
+{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+header .logo
+{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+header nav ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 20px;
+}
+header nav ul li
+{
+    list-style: none;
+}
+header nav ul li a
+{
+    display: block;
+    position: relative;
+    margin: 8px 0;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #000000b0;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif !important;
+}
+header nav ul li a:hover
+{
+    color: #1a1919;
+    transition: .1s;
+}

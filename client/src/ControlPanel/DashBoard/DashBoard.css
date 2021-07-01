@@ -1,0 +1,271 @@
+
+/* Styling for scroll bar of cards in case of overflow */
+
+.dashboardContentContainer .card .cardContent::-webkit-scrollbar
+{
+  width: 8px;
+}
+.dashboardContentContainer .card .cardContent::-webkit-scrollbar-track
+{
+    background: #eeecec;
+}
+.dashboardContentContainer .card .cardContent::-webkit-scrollbar-thumb {
+  background: rgb(190, 189, 189);
+  border-radius: 10px;
+}
+.dashboardContentContainer .card .cardContent::-webkit-scrollbar-thumb:hover {
+  background: rgb(179, 177, 177);
+}
+
+
+/* Styling of first row in which w'll greet the user */
+
+.greeting_row
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.greeting_row p
+{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.greeting_row p span
+{
+    font-size: 15px;
+    color: #2bbcff;
+    text-transform: capitalize;
+}
+.greeting_row p:nth-child(2) span
+{
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Styling of content container in which all cards of dashboard will display */
+
+.dashboardContentContainer
+{
+    width: 85%;
+    background: #fff;
+    margin-top: 30px;
+}
+
+/* Styling of small card box - (1st row) */
+
+.dashboardContentContainer .smallCardBox
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.dashboardContentContainer .smallCardBox .card
+{
+    position: relative;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90px;
+}
+.dashboardContentContainer .smallCardBox .card .contentBx
+{
+    margin-left: 20px;
+}
+.dashboardContentContainer .smallCardBox .card .contentBx .cardName
+{
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.65);
+}
+.dashboardContentContainer .smallCardBox .card .contentBx .numbers
+{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.65);
+}
+.dashboardContentContainer .smallCardBox .card .contentBx .numbers span
+{
+    font-size: 16px;
+    font-weight: 400;
+}
+.dashboardContentContainer .smallCardBox .card .iconBx
+{
+    margin-right: 30px;
+    
+}
+.dashboardContentContainer .smallCardBox .card .iconBx .MuiSvgIcon-root
+{
+    font-size: 50px;
+}
+.dashboardContentContainer .smallCardBox .card .contentBx p
+{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.72);
+    margin-top: -15px;
+}
+
+/* Styling of small large box - (2nd row) */
+
+.dashboardContentContainer .largeCardBox
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+.dashboardContentContainer .largeCardBox .card, .dashboardContentContainer .medCardBox .card
+{
+    margin-top: 20px;
+    box-shadow: rgb(0, 0, 0, 20%) 0em 0.0625em 0.1875em 0em, rgb(0, 0, 0 , 14%) 0em 0.0625em 0.0625em 0em, rgb(0, 0, 0 , 12%) 0em 0.125em 0.0625em -0.0625em;
+    border-radius: 10px;
+}
+.dashboardContentContainer .card .cardHeader
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(245, 245, 245);
+}
+.dashboardContentContainer .card .cardHeader span
+{
+    font-weight: 500;
+    font-size: 16px;
+}
+.dashboardContentContainer .card .cardHeader a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #1890ff;
+    font-size: 15px;
+    position: relative;
+    padding: 5px 5px;
+    border-radius: 4px;
+    background: transparent;
+    transition: 0.3s;
+    font-weight: 400;
+}
+.dashboardContentContainer .card .cardHeader a:hover
+{
+    background-color: #d9d9d9;
+}
+.dashboardContentContainer .card .cardContent
+{
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    overflow-y: auto;
+}
+
+
+.dashboardContentContainer .card .cardContent ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.dashboardContentContainer .card .cardContent ul li.detailsHeader
+{
+    padding: 13px;
+    background: rgb(249, 248, 253);
+    text-align: center;
+}
+.dashboardContentContainer .card .cardContent ul li.detailsHeader .received
+{
+    color: turquoise;
+    font-size: 19px;
+}
+.dashboardContentContainer .card .cardContent ul li.detailsHeader .label
+{
+    font-size: 14px;
+    padding-left: 10px;
+    color: rgba(0, 0, 0, 0.52);
+    word-spacing: 1px;
+    letter-spacing: .70px;
+}
+.dashboardContentContainer .card .cardContent ul li.detailsHeader .withdraw
+{
+    color: #ea4c89;
+    font-size: 19px;
+}
+.dashboardContentContainer .card .cardContent ul li
+{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.4mm solid #ebeaea;
+    padding: 10px;
+}
+.dashboardContentContainer .card .cardContent ul li .rightContent
+{
+    padding-left: 5px;
+    font-size: 15px;
+    color: rgba(7, 7, 7, 0.767);
+}
+.dashboardContentContainer .card .cardContent ul li .rightContent .title
+{
+    text-transform: capitalize;
+}
+.dashboardContentContainer .card .cardContent ul li .rightContent .title span
+{
+    color: rgb(24, 144, 255);
+}
+.dashboardContentContainer .card .cardContent ul li .leftContent
+{
+    padding-right: 5px;
+    font-size: 14.5px;
+    color: rgba(7, 7, 7, 0.767);
+
+}
+
+
+/* Styling of medium card box - (3rd row) */
+
+.dashboardContentContainer .medCardBox
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 20px 0;
+}
+
+.dashboardContentContainer .medCardBox .card .cardHeader
+{
+    border-bottom: 0.4mm solid #ebeaea;
+}
+.dashboardContentContainer .medCardBox .card .cardHeader a .icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.dashboardContentContainer .medCardBox .card.deposit .cardContent
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: .3;
+    font-size: 15px;
+}

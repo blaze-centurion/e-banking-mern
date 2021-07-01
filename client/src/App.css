@@ -1,0 +1,11 @@
+@media (max-width: 992px)
+{
+    .navigation
+    {
+        width: 60px;
+    }
+    .navigation.active
+    {
+        width: 250px;
+    }
+}

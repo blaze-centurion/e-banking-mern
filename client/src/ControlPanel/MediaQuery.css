@@ -1,0 +1,188 @@
+/* Styling of Main Content Container of website in which all content will display excluding sidebar */
+
+body {
+	overflow-x: auto;
+}
+
+.main {
+	position: absolute;
+	width: calc(100% - 250px);
+	left: 250px;
+	min-height: 100vh;
+	background: #fff;
+	transition: 0.5s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.main.active {
+	width: calc(100% - 60px);
+	left: 60px;
+}
+.main .topBar {
+	width: 100%;
+	background: #fff;
+	height: 61.7px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 0.4mm solid #bababa;
+}
+.main .topBar .topBarRightHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main .topBar .topBarRightHeader .toggle {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	cursor: pointer;
+}
+.main .topBar .topBarRightHeader .toggle .MuiSvgIcon-root {
+	color: rgba(0, 0, 0, 0.897);
+}
+.main .topBar .topBarRightHeader .title {
+	font-size: 18px;
+	color: rgb(0, 0, 0, 74%);
+	font-weight: 400;
+}
+.main .topBar .user {
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+/* Media Query of whole control panel */
+
+
+@media (max-width: 1222px) {
+	.dashboardContentContainer .smallCardBox {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.dashboardContentContainer .largeCardBox {
+		grid-template-columns: 100%;
+	}
+	.OperationContentContainer .cardRow .OperationCardBx
+	{
+		grid-template-columns: 2fr 1fr;
+	}
+
+}
+@media (max-width: 992px) {
+	.navigation {
+		left: -250px;
+	}
+	.navigation.active {
+		left: 0;
+		width: 250px !important;
+	}
+	.main {
+		width: 100%;
+		left: 0;
+	}
+	.main.active {
+		width: calc(100% - 250px);
+		left: 250px;
+	}
+}
+@media (max-width: 810px) {
+	.dashboardContentContainer .medCardBox {
+		grid-template-columns: 100%;
+	}
+}
+
+
+@media (max-width: 680px)
+{
+	.OperationContentContainer .cardRow .OperationCardBx
+	{
+		grid-template-columns: 1fr;
+	}
+}
+@media (max-width: 600px) {
+	.dashboardContentContainer .smallCardBox {
+		grid-template-columns: 100%;
+	}
+}
+
+@media (max-width: 400px)
+{
+	.OperationContentContainer .cardRow .OperationCardBx 
+	{
+		padding: 15px 5px;
+	}
+}
+@media (max-width: 390px)
+{
+
+	.OperationContentContainer .cardRow .OperationCardBx .card .cardFooter
+	{
+		padding: 16px 3px;
+	}
+	.OperationContentContainer .cardRow .OperationCardBx .card .cardFooter .btn
+	{
+		font-size: 15px;
+		padding: 8px;
+	}
+}
+
+@media (max-width: 340px) {
+	.dashboardContentContainer .card .cardHeader span {
+		font-size: 15px;
+	}
+	.dashboardContentContainer .largeCardBox .card .cardHeader a span {
+		font-size: 14px;
+	}
+	.dashboardContentContainer .medCardBox .card .cardHeader a span {
+		font-size: small;
+	}
+	.dashboardContentContainer
+		.medCardBox
+		.card
+		.cardHeader
+		a
+		.icon
+		.MuiSvgIcon-root {
+		font-size: 19px;
+	}
+	.dashboardContentContainer .card .cardContent .rightContent .title {
+		font-size: 13.6px;
+	}
+	.dashboardContentContainer .card .cardContent .rightContent .msg {
+		font-size: 13px;
+	}
+	.dashboardContentContainer .card .cardContent .leftContent span {
+		font-size: 13px;
+	}
+	.dashboardContentContainer .smallCardBox .card .contentBx p {
+		font-size: 14px;
+		margin: 0 10px;
+	}
+	.dashboardContentContainer .smallCardBox .card .contentBx .cardName {
+		font-size: 16px;
+	}
+	.dashboardContentContainer .smallCardBox .card .contentBx .numbers {
+		font-size: 16px;
+	}
+
+
+}
+
+@media (max-width: 320px) 
+{
+	
+	.OperationContentContainer .cardRow .OperationCardBx .card .cardContent .desc ul li span.title
+	{
+		margin-left: 0;
+	}
+	.OperationContentContainer .cardRow .OperationCardBx .card .cardFooter .btn
+	{
+		border-radius: 10px;
+		font-size: 14px;
+		padding: 8px 6px;
+	}
+}

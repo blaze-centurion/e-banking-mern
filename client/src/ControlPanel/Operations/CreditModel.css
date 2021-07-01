@@ -1,0 +1,246 @@
+.modelContainer
+{
+    position: fixed;
+    top: -150%;
+    left: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+    transition: .6s ease-in-out;
+    overflow-x: hidden;
+
+}
+.modelContainer.active
+{
+    top: 0;
+}
+
+.modelContainer .container
+{
+    background: white;
+    width: 450px;
+    min-height: 85vh;
+    border-radius: 10px;
+    position: relative;
+}
+.modelContainer.withdrawModelContainer .container
+{
+    max-height: 550px !important;
+    min-height: 550px !important;
+}
+.modelContainer .container .close_btn
+{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: red;
+    padding: 7px 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+.modelContainer .container .header
+{
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+    text-align: center;
+	border-bottom: 0.4mm solid #bababa;
+}
+.modelContainer .container .header p
+{
+    font-size: 26px;
+    font-weight: 500;
+}
+.modelContainer .container .formBx
+{
+    width: 100%;
+    overflow: hidden;
+}
+.modelContainer .container .formBx form
+{
+    display: flex;
+    width: 200%;
+}
+.modelContainer .container .formBx form .page
+{
+    width: 50%;
+    transition: .5s;
+}
+.modelContainer .container .formBx form .page .title
+{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+    /* margin: top right bottom left */
+    margin: 10px 40px 20px 40px;
+}
+.modelContainer.withdrawModelContainer .container .formBx form .page .title
+{
+    margin: 60px 40px 20px 40px;
+}
+
+.modelContainer .container .formBx form .page .field
+{
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 40px;
+}
+.modelContainer .container .formBx form .page .field .label
+{
+    font-size: 16px;
+    font-weight: 500;
+}
+.modelContainer .container .formBx form .page .field input
+{
+    width: 90%;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    margin-top: 6px;
+    font-size: 17px;
+}
+.modelContainer .container .formBx form .page .field .btn
+{
+    border: none;
+    outline: none;
+    background: #1e90ff;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.modelContainer .container .formBx form .page .field .prev
+{
+    margin-right: 100px;
+    margin-bottom: 30px;
+}
+
+.container .progress_bar
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    user-select: none;
+}
+.container .progress_bar .step
+{
+    margin: 0 60px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.container .progress_bar .step p
+{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 8px;
+}
+.container .progress_bar .step .bullet
+{
+    height: 30px;
+    width: 30px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: center;
+    line-height: 25px;
+}
+.container .progress_bar .step .bullet.active
+{
+  border-color: #d43f8d;
+  background: #d43f8d;
+}
+.container .progress_bar .step .bullet span
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container .progress_bar .step .bullet.active span
+{
+    display: none;
+}
+.container .progress_bar .step:first-child .bullet::before,
+.container .progress_bar .step:first-child .bullet::after
+{
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -190px;
+    height: 3px;
+    width: 180px;
+    background: #262626;
+}
+.container .progress_bar .step:first-child .bullet.active::after
+{
+    background: #d43f8d;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+
+.container .progress_bar .step p.active{
+    color: #d43f8d;
+    transition: 0.2s linear;
+}
+.container .progress_bar .step .check
+{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.container .progress_bar .step .check.active
+{
+    display: block;
+    color: #fff;
+}
+
+
+@media (max-width: 550px)
+{
+    .modelContainer .container
+    {
+        width: 95%;
+    }
+    .modelContainer .container .close_btn
+    {
+        top: 0;
+        right: 0;
+    }
+    .modelContainer
+    {
+        justify-content: start;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

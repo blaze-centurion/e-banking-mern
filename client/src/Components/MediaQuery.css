@@ -1,0 +1,81 @@
+
+/* Media Query of components */
+
+@media (max-width: 1020px)
+{
+	.Maincontainer .landing_section .content .title
+	{
+		color: rgb(53, 53, 53);
+	}
+	.Maincontainer .landing_section .content .desc
+	{
+		color: rgb(0,0,0);
+	}
+}
+
+@media (max-width: 991px) {
+	#signup_section .container {
+		max-width: 400px;
+	}
+	#signup_section .container .imgBx {
+		display: none;
+	}
+	#signup_section .container .signupBx .formBx {
+		width: 100% !important;
+	}
+	#signup_section .container
+	{
+		height: 480px !important;
+	}
+	#signup_section .container .signupBx .formBx form
+	{
+		width: 100%;
+	}
+}
+
+@media (max-width: 810px) {
+	.Maincontainer .landing_section .banner_container
+	{
+		background-position: center;
+		background-size: contain;
+	}
+}
+@media (max-width: 600px)
+{
+	
+	header nav ul
+	{
+		position: fixed;
+		top: 0;
+		left: -250px;
+		width: 100%;
+		height: 100vh;
+		max-width: 250px;
+		background-color: rgb(50,53,68);
+		display: block;
+		padding: 100px 0;
+		text-align: center;
+		transition: 0.5s ease-in-out;
+	}
+	header nav ul.active
+	{
+		left: 0px;
+	}
+	header nav ul li a
+	{
+		color: #fff;
+		font-size: 19px;
+	}
+	header .toggle-menu
+	{
+		display: block;
+	}
+}
+
+@media (max-width: 325px)
+{
+	.Maincontainer .landing_section .banner_container
+	{
+		background-size: 100%;
+	}
+}
